@@ -84,6 +84,9 @@ you will need to:
 
 Example:
 
+* Use the username and password sent to you in [Request Access](#request-access)
+step 5. 
+
 ```
 curl -u username:password --cookie <the cookie> https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/Patient
 ```

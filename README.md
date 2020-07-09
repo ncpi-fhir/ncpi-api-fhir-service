@@ -80,15 +80,17 @@ endpoint (except `/endpoint-health`). When you make a request to the server,
 you will need to:
 
 - Include your basic authentication credentials in the `Authorization` header
-- Include your cookie in the `Cookie` header
+- Include your `AWSELBAuthSessionCookie-0` cookie in the `Cookie` header
 
 Example:
 
 * Use the username and password sent to you in [Request Access](#request-access)
-step 5. 
+step 5.
+
+* Use the `AWSELBAuthSessionCookie-0` cookie
 
 ```
-curl -u username:password --cookie <the cookie> https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/Patient
+curl -u username:password -L --cookie <the cookie> https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/Patient
 ```
 
 ## Development

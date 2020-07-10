@@ -68,7 +68,7 @@ You will do this every time Cookie expires (~1 week)
 
 3. Save the cookie from the response
 
-   The cookie can be found in the response's `Cookie` header.
+   The cookie can be found in the response's `Set-Cookie` directive for `AWSELBAuthSessionCookie-0`.
 
 #### Authenticate with Server
 
@@ -79,8 +79,8 @@ The NCPI FHIR server currently uses basic authentication on almost every
 endpoint (except `/endpoint-health`). When you make a request to the server,
 you will need to:
 
-- Include your basic authentication credentials in the `Authorization` header
-- Include your `AWSELBAuthSessionCookie-0` cookie in the `Cookie` header
+- Include your basic authentication credentials in an `Authorization` header
+- Include your `AWSELBAuthSessionCookie-0=yadayada` cookie text in a `Cookie` header
 
 Example:
 

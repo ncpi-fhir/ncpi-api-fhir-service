@@ -1,5 +1,12 @@
 # NCPI FHIR Service Change History
 
+## Release 0.2.0
+
+### New features and changes
+
+- [#15](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/15) -  Added PRD environment in Jenkinsfile - [a2c9f395](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/a2c9f395a44f72ad6728794f18ceb5c627b0b872) by [alubneuski](https://github.com/alubneuski)
+
+
 ## Release 0.1.0
 
 ### Summary

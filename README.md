@@ -28,16 +28,11 @@ https://ncpi-api-fhir-service-dev.kidsfirstdrc.org
 very user/developer friendly. This is temporary as we are still working on the
 NCPI infrastructure and server authentication. Please bear with us!**
 
-### Two Layer Authentication
 In order to interact with the FHIR servers in any of the environments, you
-will need to go through two levels of authentication:
+will need to authenticate with a Google account to gain access to the
+server's environment.
 
-1. Authenticate to gain access to the server's environment
-2. Authenticate with the server to gain access to the server's data
-
-### Access Instructions
-
-#### Request Access
+### Request Access
 
 You will do these steps only one time.
 
@@ -57,9 +52,9 @@ Slack message in the NCPI `#fhir-wg` channel with the Google account you used be
 
 5. You will receive an email with confirmation of the access
 
-#### Authenticate to Access Server Environment
+### Authenticate to Access Server Environment
 
-You will do this every time Cookie expires (~1 week)
+You will do this every time your Cookie expires (~1 week)
 
 1. Repeat steps 1-2 above
 2. If successful, you will see a page from the server that says:
@@ -70,27 +65,29 @@ You will do this every time Cookie expires (~1 week)
 
    The cookie can be found in the response's `Set-Cookie` directive for `AWSELBAuthSessionCookie-0`.
 
-#### Authenticate with Server
+### ⚠️ No Need for a User Account on Server
 
-You will do this every time you want to send HTTP requests to any of the
-NCPI FHIR servers.  
+Previously, you needed a user account on the server in order to authenticate
+with it before sending any other HTTP requests to it. This is no longer needed.
 
-The NCPI FHIR server currently uses basic authentication on almost every
-endpoint (except `/endpoint-health`). When you make a request to the server,
-you will need to:
+Most users will not need to have an account on the server now since the
+permissions for anonymous HTTP requests allow one to perform any standard FHIR
+client operation on the server. This means you can create, read, update, delete,
+and search for FHIR resources on the server.
 
-- Include your basic authentication credentials in an `Authorization` header
-- Include your `AWSELBAuthSessionCookie-0=yadayada` cookie text in a `Cookie` header
+### Send Requests to Server
+
+Although you don't need an account on the server to authenticate with it,
+you will still need to do something to tell the server you have been granted
+access to it.
+
+When you send HTTP requests to the server make sure to include your
+`AWSELBAuthSessionCookie-0=yadayada` cookie text in a `Cookie` header.
 
 Example:
 
-* Use the username and password sent to you in [Request Access](#request-access)
-step 5.
-
-* Use the `AWSELBAuthSessionCookie-0` cookie
-
 ```
-curl -u username:password -L --cookie <the cookie> https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/Patient
+curl -L --cookie <the cookie> https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/Patient
 ```
 
 ## Development

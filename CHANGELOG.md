@@ -1,5 +1,18 @@
 # NCPI FHIR Service Change History
 
+## Release 0.3.0
+
+### Summary
+
+- Emojis: 🐳 x1, ✨ x1
+- Categories: Ops x1, Additions x1
+
+### New features and changes
+
+- [#20](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/20) - 🐳 Point to NCPI docker img not KF img - [daf8234b](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/daf8234bd267698e73b39a94dcf1d7d267b53d8e) by [znatty22](https://github.com/znatty22)
+- [#18](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/18) - ✨ Grant anonymous user FHIR client superuser - [6fcded9f](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/6fcded9fa2d395df006606119720e2b9b3ff2633) by [znatty22](https://github.com/znatty22)
+
+
 ## Release 0.2.0
 
 ### New features and changes

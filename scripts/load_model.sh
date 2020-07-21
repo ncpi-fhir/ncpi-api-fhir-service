@@ -11,8 +11,8 @@
 set -eo pipefail
 
 # Args
-GIT_REPO_PATH=${1:-ncpi-fhir/ncpi-model-forge}
-GIT_REPO_BRANCH=${2:-master}
+GIT_REPO_PATH=ncpi-fhir/ncpi-model-forge
+GIT_REPO_BRANCH=${1:-master}
 
 # Vars
 if [[ ! -f '.env' ]]; then

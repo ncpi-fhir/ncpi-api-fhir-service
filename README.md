@@ -36,19 +36,29 @@ server's environment.
 
 You will do these steps only one time.
 
-1. In a browser, go to the server URL
-
-    Make sure you are signed out of any Google accounts
+1. In a browser, go to the server URL. Make sure you are signed out of any
+Google accounts
 
     Example: `https://ncpi-api-fhir-service-dev.kidsfirstdrc.org`
 
-2. Click `Login with Google` and try to sign in with a Google account
+2. Click `Login with Google` and try to sign in with a Google account:
 
-3. You will get a page with a `401 Not Authorized`
+    <p>
+      <img src="docs/images/auth0-signin.png" alt="Auth0 Sign-in" height="400"
+      style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
+    </p>
+
+3. You will get a page with a `401 Authorization Required` message:
+
+    <p>
+      <img src="docs/images/401-not-auth.png" alt="401 Not Auth" width="400"
+      style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
+    </p>
 
 4. Send an email to [Alex Lubneuski](mailto:LUBNEUSKIA@EMAIL.CHOP.EDU)
 and [Natasha Singh](mailto:singhn4@email.chop.edu) or a
-Slack message in the NCPI `#fhir-wg` channel with the Google account you used before.
+Slack message in the NCPI `#fhir-wg` channel with the Google account you used before
+and request access for the server URL you wish to access.
 
 5. You will receive an email with confirmation of the access
 
@@ -56,10 +66,19 @@ Slack message in the NCPI `#fhir-wg` channel with the Google account you used be
 
 You will do this every time your Cookie expires (~1 week)
 
-1. Repeat steps 1-2 above
-2. If successful, you will see a page from the server that says:
+1. In a browser, go to `<server URL>/metadata`
 
- `This is the base URL of FHIR server.` under the `Response Body` section.
+    Example: https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/metadata
+
+2. If successful, you will see a page from the server that shows:
+
+ `HTTP 200 OK` at the top along with the server's `CapabilityStatement`.
+  It will look something like:
+
+    <p>
+       <img src="docs/images/smile-cdr-success.png" alt="Success"
+       style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
+    </p>
 
 3. Save the cookie from the response
 

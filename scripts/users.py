@@ -54,7 +54,7 @@ def upsert(user_file, base_url, username=None, password=None, headers=None):
         header_dict = {}
         if headers:
             for kvpair in headers.split(' '):
-                k, v = kvpair.split('=')
+                k, v = kvpair.split('=', 1)
                 header_dict[k.strip()] = v.strip()
 
         auth = None
@@ -95,13 +95,21 @@ def upsert(user_file, base_url, username=None, password=None, headers=None):
             )
             resp_content = response_content(response)
 
+        err = False
         if response.status_code not in {200, 201}:
+            err = True
+        else:
+            try:
+                resp_content['password'] = user.get('password')
+            except Exception:
+                err = True
+            else:
+                submitted_users.append(resp_content)
+
+        if err:
             raise Exception(
                 f'Failed to create or update user {user["username"]}!'
             )
-        else:
-            resp_content['password'] = user.get('password')
-            submitted_users.append(resp_content)
 
     with open(user_file, 'w') as user_json:
         json.dump(submitted_users, user_json, indent=2, sort_keys=True)

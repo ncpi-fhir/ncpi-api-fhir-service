@@ -1,5 +1,17 @@
 # NCPI FHIR Service Change History
 
+## Release 0.3.1
+
+### Summary
+
+- Emojis: 🐛 x1
+- Categories: Fixes x1
+
+### New features and changes
+
+- [#24](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/24) - 🐛 Fix img display on README - [9c583dde](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/9c583dde4e3aec6ed975f784a12a63fd4ad6dd33) by [znatty22](https://github.com/znatty22)
+
+
 ## Release 0.3.0
 
 ### Summary

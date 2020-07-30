@@ -43,17 +43,13 @@ Google accounts
 
 2. Click `Login with Google` and try to sign in with a Google account:
 
-    <p>
-      <img src="docs/images/auth0-signin.png" alt="Auth0 Sign-in" height="400"
-      style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
-    </p>
+  <img src="docs/images/auth0-signin.png" alt="Auth0 Sign-in" height="400"
+  style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
 
 3. You will get a page with a `401 Authorization Required` message:
 
-    <p>
-      <img src="docs/images/401-not-auth.png" alt="401 Not Auth" width="400"
-      style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
-    </p>
+  <img src="docs/images/401-not-auth.png" alt="401 Not Auth" width="400"
+  style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
 
 4. Send an email to [Alex Lubneuski](mailto:LUBNEUSKIA@EMAIL.CHOP.EDU)
 and [Natasha Singh](mailto:singhn4@email.chop.edu) or a
@@ -70,15 +66,11 @@ You will do this every time your Cookie expires (~1 week)
 
     Example: https://ncpi-api-fhir-service-dev.kidsfirstdrc.org/metadata
 
-2. If successful, you will see a page from the server that shows:
+2. If successful, you will see a page from the server that shows
+   the server's `CapabilityStatement`:
 
- `HTTP 200 OK` at the top along with the server's `CapabilityStatement`.
-  It will look something like:
-
-    <p>
-       <img src="docs/images/smile-cdr-success.png" alt="Success"
-       style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
-    </p>
+    <img src="docs/images/smile-cdr-success.png" alt="Success"
+   style="box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
 
 3. Save the cookie from the response
 

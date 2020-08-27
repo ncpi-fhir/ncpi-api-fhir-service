@@ -2,7 +2,6 @@
 ecs_service_type_1_standard {
     projectName                = "ncpi-api-fhir-service"
     orgFullName                = "kids-first"
-    account                    = "chopd3b"
     environments               = "dev,qa,prd"
     docker_image_type          = "debian"
     create_default_iam_role    = "1"

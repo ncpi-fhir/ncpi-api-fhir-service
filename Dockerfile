@@ -1,6 +1,7 @@
 # ------ Integration Test Server Image ------
 ARG imageName=${imageName}
-FROM $imageName as test 
+ARG accountId=${accountId}
+FROM $accountId.dkr.ecr.us-east-1.amazonaws.com/$imageName:2020.05.PRE-14 as test 
 
 WORKDIR /home/smile/smilecdr
 

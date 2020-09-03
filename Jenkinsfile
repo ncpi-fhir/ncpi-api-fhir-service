@@ -2,7 +2,6 @@
 ecs_service_type_1_standard {
     projectName                = "ncpi-api-fhir-service"
     orgFullName                = "kids-first"
-    account                    = "kf-strides"
     environments               = "dev,qa,prd"
     docker_image_type          = "debian"
     create_default_iam_role    = "1"
@@ -20,4 +19,5 @@ ecs_service_type_1_standard {
     additional_container_ports = "9000,9100"
     dev_cidr                   = "0.0.0.0/0"
     qa_cidr                    = "0.0.0.0/0"
+    snapshot_identifier_qa     = "ncpi-api-fhir-service-prd-migration-kms-rds"
 }

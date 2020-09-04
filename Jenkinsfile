@@ -19,5 +19,6 @@ ecs_service_type_1_standard {
     additional_container_ports = "9000,9100"
     dev_cidr                   = "0.0.0.0/0"
     qa_cidr                    = "0.0.0.0/0"
-    snapshot_identifier_qa     = "ncpi-api-fhir-service-prd-migration-kms-rds"
+    snapshot_identifier_qa     = "ncpi-api-fhir-service-qa-migration-kms-rds"
+    snapshot_identifier_prd    = "ncpi-api-fhir-service-prd-migration-kms-rds"
 }

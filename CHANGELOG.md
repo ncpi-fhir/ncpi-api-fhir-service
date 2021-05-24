@@ -1,5 +1,18 @@
 # NCPI FHIR Service Change History
 
+## Release 0.4.0
+
+### Summary
+
+- Emojis: ⬆️ x1, 🔧 x1
+- Categories: Ops x1, Other Changes x1
+
+### New features and changes
+
+- [#30](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/30) - ⬆️  Upgrade to 2021.02.R05 - [6365d9f1](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/6365d9f1930d04a53b1cb8c5e051848b58c0f383) by [liberaliscomputing](https://github.com/liberaliscomputing)
+- [#29](https://github.com/ncpi-fhir/ncpi-api-fhir-service/pull/29) - 🔧 Added additional ssl - [1fcb0e79](https://github.com/ncpi-fhir/ncpi-api-fhir-service/commit/1fcb0e7932d6514aaa5b26368b448e0138e93511) by [alubneuski](https://github.com/alubneuski)
+
+
 ## Release 0.3.1
 
 ### Summary

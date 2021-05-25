@@ -22,3 +22,4 @@ ecs_service_type_1_standard {
     snapshot_identifier_qa     = "ncpi-api-fhir-service-prd-migration-kms-rds"
     additional_ssl_cert_domain_name = "*.kidsfirstdrc.org"
 }
+

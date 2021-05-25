@@ -21,6 +21,5 @@ ecs_service_type_1_standard {
     qa_cidr                    = "0.0.0.0/0"
     snapshot_identifier_qa     = "ncpi-api-fhir-service-prd-migration-kms-rds"
     additional_ssl_cert_domain_name = "*.kidsfirstdrc.org"
-    external_domain = "kidsfirstdrc.org"
 }
 
